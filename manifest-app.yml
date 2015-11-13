@@ -1,0 +1,12 @@
+---
+applications:
+- name: community-stage
+  memory: 512M
+  instances: 1
+  host: community-stage
+  domains:
+  - apps.cloud.gov
+services:
+  - community-redis-swarm
+  - community-stage-db
+  - discourse-env

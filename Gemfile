@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 # if there is a super emergency and rubygems is playing up, try
 #source 'http://production.cf.rubygems.org'
+ruby "2.2.2"
 
 def rails_master?
   ENV["RAILS_MASTER"] == '1'
@@ -182,3 +183,5 @@ group :profile do
   # if you need to profile, uncomment out this line
   # gem 'rack-perftools_profiler', require: 'rack/perftools_profiler', platform: :mri_19
 end
+
+gem 'rails_12factor', group: :production

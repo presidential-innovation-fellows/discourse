@@ -6,6 +6,8 @@ require_relative '../lib/discourse_event'
 require_relative '../lib/discourse_plugin'
 require_relative '../lib/discourse_plugin_registry'
 
+require_relative './load_cf_env'
+
 # Global config
 require_relative '../app/models/global_setting'
 
