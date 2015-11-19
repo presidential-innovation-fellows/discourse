@@ -1,13 +1,13 @@
 ---
 applications:
-- name: community-stage
+- name: community-prod
   memory: 512M
   instances: 1
-  host: community-stage
+  host: community
   domains:
-  - apps.cloud.gov
+  - cloud.gov
   command: bundle exec puma -t 5:5 -p ${PORT:-3000} -e ${RACK_ENV:-development} --preload
 services:
-  - community-redis-swarm-stage
-  - community-stage-db
-  - discourse-env-stage
+  - community-redis-swarm
+  - community-db
+  - discourse-env

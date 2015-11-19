@@ -1,0 +1,11 @@
+---
+applications:
+- name: community-stage-worker
+  memory: 512M
+  instances: 1
+  no-route: true
+  command: bundle exec sidekiq -e $RAILS_ENV 
+services:
+  - community-redis-swarm
+  - community-stage-db
+  - discourse-env
