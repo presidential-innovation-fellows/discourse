@@ -2,7 +2,7 @@
 applications:
 - name: community-prod
   memory: 512M
-  instances: 1
+  instances: 3
   host: community
   domains:
   - cloud.gov
