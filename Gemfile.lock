@@ -1,5 +1,5 @@
 GEM
-  remote: https://rubygems.org/
+  remote: http://production.cf.rubygems.org/
   specs:
     actionmailer (4.2.5)
       actionpack (= 4.2.5)
@@ -292,6 +292,8 @@ GEM
       msgpack (>= 0.4.3)
       trollop (>= 1.16.2)
     redis (3.2.2)
+    redis-namespace (1.5.2)
+      redis (~> 3.0, >= 3.0.4)
     ref (2.0.0)
     rest-client (1.8.0)
       http-cookie (>= 1.0.2, < 2.0)
@@ -479,6 +481,7 @@ DEPENDENCIES
   rb-inotify (~> 0.9)
   rbtrace
   redis
+  redis-namespace
   rest-client
   rinku
   rmmseg-cpp

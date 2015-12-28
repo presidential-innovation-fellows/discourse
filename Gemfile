@@ -1,6 +1,6 @@
-source 'https://rubygems.org'
+#source 'https://rubygems.org'
 # if there is a super emergency and rubygems is playing up, try
-#source 'http://production.cf.rubygems.org'
+source 'http://production.cf.rubygems.org'
 ruby "2.2.2"
 
 def rails_master?
@@ -185,3 +185,5 @@ group :profile do
 end
 
 gem 'rails_12factor', group: :production
+
+gem 'redis-namespace'
