@@ -644,7 +644,6 @@ trust:
   tl3_requires_days_visited:
     default: 50
     min: 0
-    max: 100
   tl3_requires_topics_replied_to:
     default: 10
     min: 0
@@ -1028,6 +1027,10 @@ uncategorized:
 
   automatically_unpin_topics:
     default: true
+    client: true
+
+  read_time_word_count:
+    default: 500
     client: true
 
 user_preferences:
