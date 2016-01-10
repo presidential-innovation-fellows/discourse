@@ -65,7 +65,7 @@ GEM
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     builder (3.2.2)
-    byebug (8.2.1)
+    byebug (6.0.2)
     certified (1.0.0)
     coderay (1.1.0)
     concurrent-ruby (1.0.0)
@@ -80,14 +80,12 @@ GEM
     docile (1.1.5)
     domain_name (0.5.25)
       unf (>= 0.0.5, < 1.0.0)
-    ember-data-source (2.2.1)
-      ember-source (>= 1.8, < 3.0)
-    ember-handlebars-template (0.3.5)
-      barber (>= 0.10.0)
-      sprockets (>= 2.1, < 3.5)
-      tilt
-    ember-rails (0.19.3)
-      active-model-adapter-source (>= 1.13.0)
+    ember-data-source (1.0.0.beta.16.1)
+      ember-source (~> 1.8)
+    ember-handlebars-template (0.1.5)
+      barber (>= 0.9.0)
+      sprockets (>= 2.1, < 3.1)
+    ember-rails (0.18.2)
       active_model_serializers
       ember-data-source (>= 1.13.0)
       ember-handlebars-template (>= 0.1.1, < 1.0)
@@ -160,8 +158,8 @@ GEM
     lru_redux (1.1.0)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
-    memory_profiler (0.9.6)
-    message_bus (1.1.1)
+    memory_profiler (0.9.4)
+    message_bus (2.0.0.beta.2)
       rack (>= 1.1.3)
       redis
     metaclass (0.0.4)
@@ -181,7 +179,7 @@ GEM
     netrc (0.11.0)
     nokogiri (1.6.7.1)
       mini_portile2 (~> 2.0.0.rc2)
-    nokogumbo (1.4.7)
+    nokogumbo (1.4.1)
       nokogiri
     oauth (0.4.7)
     oauth2 (1.0.0)
@@ -217,8 +215,7 @@ GEM
     omniauth-twitter (1.2.1)
       json (~> 1.3)
       omniauth-oauth (~> 1.1)
-    onebox (1.5.30)
-      htmlentities (~> 4.3.4)
+    onebox (1.5.31)
       moneta (~> 0.8)
       multi_json (~> 1.11)
       mustache
@@ -273,8 +270,6 @@ GEM
       rails_serve_static_assets
       rails_stdout_logging
     rails_multisite (1.0.3)
-    rails_serve_static_assets (0.0.4)
-    rails_stdout_logging (0.0.4)
     railties (4.2.5)
       actionpack (= 4.2.5)
       activesupport (= 4.2.5)
@@ -396,7 +391,7 @@ GEM
     thread_safe (0.3.5)
     tilt (1.4.1)
     timecop (0.8.0)
-    trollop (2.1.2)
+    trollop (2.1.1)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
     uglifier (2.7.2)
@@ -447,7 +442,7 @@ DEPENDENCIES
   lru_redux
   mail
   memory_profiler
-  message_bus
+  message_bus (= 2.0.0.beta.2)
   mime-types
   minitest
   mocha
@@ -509,3 +504,6 @@ DEPENDENCIES
   uglifier
   unf
   unicorn
+
+BUNDLED WITH
+   1.11.2
