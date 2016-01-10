@@ -37,9 +37,9 @@ end
 gem 'mail'
 gem 'mime-types', require: 'mime/types/columnar'
 
-#gem 'redis-rails'
 gem 'hiredis'
 gem 'redis', require:  ["redis", "redis/connection/hiredis"]
+gem 'redis-namespace'
 
 gem 'active_model_serializers', '~> 0.8.3'
 
@@ -50,7 +50,7 @@ gem 'ember-source', '1.12.1'
 gem 'barber'
 gem 'babel-transpiler'
 
-gem 'message_bus'
+gem 'message_bus', '2.0.0.beta.2'
 
 gem 'rails_multisite'
 

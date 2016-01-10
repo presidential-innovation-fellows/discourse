@@ -96,7 +96,7 @@
   }
   .search-link {
     .fa, .blurb {
-      color: dark-light-choose(scale-color($tertiary, $lightness: -40%), scale-color($tertiary, $lightness: 40%));
+      color: dark-light-choose(scale-color($primary, $lightness: 45%), scale-color($secondary, $lightness: 55%));
     }
   }
   .badge-wrapper {
@@ -108,9 +108,6 @@
   margin-left: 10px;
   width: calc(50% - 65px);
 }
-
-// hide cancel upload link on IE9 (not supported)
-.ie9 #cancel-file-upload { display: none; }
 
 // only disabled when the device is touch-only
 .touch.mobile-device #reply-control.open .grippie {

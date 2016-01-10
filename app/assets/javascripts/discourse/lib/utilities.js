@@ -143,6 +143,19 @@ Discourse.Utilities = {
     return String(text).trim();
   },
 
+  // Determine the row and col of the caret in an element
+  caretRowCol: function(el) {
+    var caretPosition = Discourse.Utilities.caretPosition(el);
+    var rows = el.value.slice(0, caretPosition).split("\n");
+    var rowNum = rows.length;
+
+    var colNum = caretPosition - rows.splice(0, rowNum - 1).reduce(function(sum, row) {
+      return sum + row.length + 1;
+    }, 0);
+
+    return { rowNum: rowNum, colNum: colNum};
+  },
+
   // Determine the position of the caret in an element
   caretPosition: function(el) {
     var r, rc, re;
@@ -256,17 +269,17 @@ Discourse.Utilities = {
   },
 
   isAnImage: function(path) {
-    return (/\.(png|jpe?g|gif|bmp|tiff?|svg|webp)$/i).test(path);
+    return (/\.(png|jpe?g|gif|bmp|tiff?|svg|webp|ico)$/i).test(path);
   },
 
   allowsImages: function() {
     return Discourse.Utilities.authorizesAllExtensions() ||
-           (/(png|jpe?g|gif|bmp|tiff?|svg|webp)/i).test(Discourse.Utilities.authorizedExtensions());
+           (/(png|jpe?g|gif|bmp|tiff?|svg|webp|ico)/i).test(Discourse.Utilities.authorizedExtensions());
   },
 
   allowsAttachments: function() {
     return Discourse.Utilities.authorizesAllExtensions() ||
-           !(/((png|jpe?g|gif|bmp|tiff?|svg|webp)(,\s)?)+$/i).test(Discourse.Utilities.authorizedExtensions());
+           !(/((png|jpe?g|gif|bmp|tiff?|svg|web|ico)(,\s)?)+$/i).test(Discourse.Utilities.authorizedExtensions());
   },
 
   displayErrorForUpload: function(data) {
