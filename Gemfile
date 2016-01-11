@@ -184,7 +184,7 @@ begin
   gem 'stackprof', require: false, platform: [:mri_21, :mri_22, :mri_23]
   gem 'memory_profiler', require: false, platform: [:mri_21, :mri_22, :mri_23]
 rescue Bundler::GemfileError
-  begin 
+  begin
     STDERR.puts "You are running an old version of bundler, please upgrade bundler ASAP, if you are using Discourse docker, rebuild your container."
     gem 'stackprof', require: false, platform: [:mri_21, :mri_22]
     gem 'memory_profiler', require: false, platform: [:mri_21, :mri_22]
@@ -208,4 +208,5 @@ end
 
 gem 'rails_12factor', group: :production
 
-gem 'redis-namespace'
+gem 'rails_serve_static_assets'
+
