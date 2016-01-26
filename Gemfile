@@ -47,7 +47,7 @@ gem 'active_model_serializers', '~> 0.8.3'
 gem 'onebox'
 
 gem 'ember-rails'
-gem 'ember-source', '1.12.1'
+gem 'ember-source', '1.12.2'
 gem 'barber'
 gem 'babel-transpiler'
 
@@ -84,7 +84,9 @@ gem 'omniauth-twitter'
 gem 'omniauth-github-discourse', require: 'omniauth-github'
 
 gem 'omniauth-oauth2', require: false
-gem 'omniauth-google-oauth2'
+
+# this removes the dependency on 'addressable'
+gem 'omniauth-google-oauth2', git: 'git://github.com/zquestz/omniauth-google-oauth2.git', ref: 'b492c4bb8286d35'
 gem 'oj'
 gem 'pg'
 gem 'pry-rails', require: false
