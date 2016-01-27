@@ -83,7 +83,7 @@ gem 'omniauth-twitter'
 # forked while https://github.com/intridea/omniauth-github/pull/41 is being upstreamd
 gem 'omniauth-github-discourse', require: 'omniauth-github'
 
-gem 'omniauth-oauth2', require: false
+gem 'omniauth-oauth2', '~> 1.3.1', require: false
 
 # this removes the dependency on 'addressable'
 gem 'omniauth-google-oauth2', git: 'git://github.com/zquestz/omniauth-google-oauth2.git', ref: 'b492c4bb8286d35'
