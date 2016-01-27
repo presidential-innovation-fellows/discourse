@@ -1,7 +1,7 @@
 #source 'https://rubygems.org'
 # if there is a super emergency and rubygems is playing up, try
 source 'http://production.cf.rubygems.org'
-ruby "2.2.2"
+ruby "2.2.4"
 
 def rails_master?
   ENV["RAILS_MASTER"] == '1'
@@ -47,7 +47,7 @@ gem 'active_model_serializers', '~> 0.8.3'
 gem 'onebox'
 
 gem 'ember-rails'
-gem 'ember-source', '1.12.1'
+gem 'ember-source', '1.12.2'
 gem 'barber'
 gem 'babel-transpiler'
 
@@ -83,8 +83,10 @@ gem 'omniauth-twitter'
 # forked while https://github.com/intridea/omniauth-github/pull/41 is being upstreamd
 gem 'omniauth-github-discourse', require: 'omniauth-github'
 
-gem 'omniauth-oauth2', require: false
-gem 'omniauth-google-oauth2'
+gem 'omniauth-oauth2', '~> 1.3.1', require: false
+
+# this removes the dependency on 'addressable'
+gem 'omniauth-google-oauth2', git: 'git://github.com/zquestz/omniauth-google-oauth2.git', ref: 'b492c4bb8286d35'
 gem 'oj'
 gem 'pg'
 gem 'pry-rails', require: false
