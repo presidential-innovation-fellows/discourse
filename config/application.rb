@@ -9,6 +9,9 @@ require_relative '../lib/discourse_plugin_registry'
 # Global config
 require_relative '../app/models/global_setting'
 
+# Load CF environment
+require_relative './load_cf_env'
+
 require 'pry-rails' if Rails.env.development?
 
 if defined?(Bundler)

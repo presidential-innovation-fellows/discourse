@@ -57,6 +57,7 @@ gem 'rails_multisite'
 gem 'fast_xs'
 
 gem 'fast_xor'
+gem 'rails_12factor'
 
 # while we sort out https://github.com/sdsykes/fastimage/pull/46
 gem 'fastimage_discourse', require: 'fastimage'

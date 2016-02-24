@@ -1,0 +1,13 @@
+---
+applications:
+- name: discourse-prod
+  memory: 512M
+  instances: 1
+  host: pif-discourse
+  domains:
+  - apps.cloud.gov
+  command: bundle exec puma -t 5:5 -p ${PORT:-3000} -e ${RACK_ENV:-development} --preload
+services:
+  - pif-discuss-redis
+  - pif-discuss-psql
+  - discourse-env

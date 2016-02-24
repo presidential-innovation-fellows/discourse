@@ -1,0 +1,14 @@
+applications:
+- command: curl https://18f-tmate-bootstrap.s3.amazonaws.com/tmate-debug-init.sh |
+    sh
+  domains:
+  - apps.cloud.gov
+  host: pif-discourse
+  instances: 1
+  memory: 512M
+  name: discourse-prod-ssh
+  no-route: true
+services:
+- pif-discuss-redis
+- pif-discuss-psql
+- discourse-env

@@ -1,0 +1,11 @@
+---
+applications:
+- name: discourse-prod-worker
+  memory: 512M
+  instances: 1
+  no-route: true
+  command: bundle exec sidekiq -e $RAILS_ENV
+services:
+  - pif-discuss-redis
+  - pif-discuss-psql
+  - discourse-env
