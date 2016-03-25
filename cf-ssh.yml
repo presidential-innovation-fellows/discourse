@@ -3,12 +3,12 @@ applications:
     sh
   domains:
   - apps.cloud.gov
-  host: pif-discourse
+  host: apps-gov-discuss
   instances: 1
   memory: 512M
-  name: discourse-prod-ssh
+  name: apps-gov-discuss-prod-ssh
   no-route: true
 services:
-- pif-discuss-redis
-- pif-discuss-psql
-- discourse-env
+- apps-gov-discuss-redis
+- apps-gov-discuss-psql
+- apps-gov-discuss-env
