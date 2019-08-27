@@ -119,7 +119,7 @@ GEM
       rake-compiler
     fast_xs (0.8.0)
     fastimage_discourse (1.6.6)
-    ffi (1.9.10)
+    ffi (1.11.1)
     flamegraph (0.1.0)
       fast_stack
     foreman (0.78.0)
